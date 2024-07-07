@@ -22,8 +22,14 @@
     border-radius: 5px;
 }
 
-.dark2{
+.dark-2{
     color: #474747;
+}
+/*header styles*/
+.header{
+    background-image: url("../images/developer.png"), url("../images/header_bg.png");
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
 }
 
 /*nav styles*/
@@ -52,4 +58,30 @@ nav ul li{
 nav li a{
     text-decoration: none;
     font-size: 20px;
+}
+
+/*Banner styles*/
+
+.banner{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 35px 0px 200px;
+}
+
+.banner-content{
+    max-width: 580px;
+}
+
+.banner-greetings{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.banner-title{
+    font-size: 85px;
+    font-weight: 700;
+}
+
+.banner-profile-pic{
+    width: 580px;
 }
