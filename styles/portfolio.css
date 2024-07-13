@@ -1,9 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .open-sans-normal{
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
 }
 
 /*shared styles*/
@@ -50,6 +54,7 @@
     background-image: url("../images/developer.png"), url("../images/header_bg.png");
     background-repeat: no-repeat;
     background-position: top left, bottom right;
+    border-radius: 10px;
 }
 
 /*nav styles*/
@@ -68,6 +73,7 @@ nav{
 nav ul{
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 nav ul li{
@@ -97,6 +103,10 @@ nav li a{
     font-weight: 600;
 }
 
+.banner-description{
+    margin-bottom: 20px;
+}
+
 .banner-title{
     font-size: 85px;
     font-weight: 700;
@@ -120,11 +130,12 @@ main section{
 
 .about{
     border-radius: 10px;
-    padding: 130px 150px;
+    padding: 120px 150px;
     text-align: center;
 }
 
 .about-items{
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -152,6 +163,13 @@ main section{
 .resume-container{
     display: flex;
     gap: 100px;
+}
+
+.resume-section-title{
+    font-size: 35px;
+    font-weight: 800;
+    color: #181818;
+    margin-bottom: 20px;
 }
 
 .resume-column-title{
@@ -198,10 +216,17 @@ footer{
     border-radius: 10px;
 }
 
-
+.socials{
+    display: flex;
+    gap: 20px;
+}
 
 .footer-column{
     width: 50%;
+}
+
+.footer-column>p{
+    margin-bottom: 10px;
 }
 
 footer input[type="text"], footer input[type="email"]{
@@ -235,12 +260,46 @@ footer textarea{
 }
 
 @media screen and (max-width: 576px) {
-    .skills-container, .resume-container, footer{
+    .skills-container, .resume-container, .banner, footer, nav, nav>ul{
         flex-direction: column;
+    }
+
+    nav>ul{
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav>ul>li{
+        margin-right: 0px;
+    }
+
+    .banner-content{
+        text-align: center;
+    }
+
+    .resume-section-title{
+        font-size: 26px;
+        font-weight: 800;
+        color: #181818;
+        margin-bottom: 20px;
     }
 
     .skill{
         text-align: center;
+    }
+
+    .header{
+        background-image: none;
+    }
+
+    .banner{
+        margin: 20px;
+    }
+
+    .banner-profile-pic{
+        width: 100%;
     }
 
     footer, .about{
@@ -260,9 +319,8 @@ footer textarea{
         width: calc(100% - 40px);
     }
     .socials{
-        display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 30px;
     }
 }
