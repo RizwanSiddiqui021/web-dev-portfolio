@@ -195,7 +195,10 @@ footer{
     padding: 130px 230px;
     display: flex;
     gap: 100px;
+    border-radius: 10px;
 }
+
+
 
 .footer-column{
     width: 50%;
@@ -225,3 +228,41 @@ footer textarea{
     font-size: 18px;
 }
 
+/* responsive-media-query */
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .skills-container, .resume-container, footer{
+        flex-direction: column;
+    }
+
+    .skill{
+        text-align: center;
+    }
+
+    footer, .about{
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-items{
+        flex-direction: column;
+    }
+
+    .footer-column{
+        width: 100%;
+    }
+
+    footer input[type="text"], footer input[type="email"], footer textarea{
+        width: calc(100% - 40px);
+    }
+    .socials{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+}
